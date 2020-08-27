@@ -1,0 +1,4 @@
+import arcpy
+for m in range(8,57):
+   arcpy.ClustersOutliers_stats("地市申请量",str(arcpy.ListFields("地市申请量")[m].name),arcpy.ListFields("地市申请量")[m].name+'lisa.shp',
+"CONTIGUITY_EDGES_CORNERS","EUCLIDEAN_DISTANCE","NONE")
